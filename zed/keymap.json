@@ -1,0 +1,29 @@
+[
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      "j j": ["vim::SwitchMode", "Normal"],
+      "j k": ["vim::SwitchMode", "Normal"]
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal && vim_operator == none && !VimWaiting",
+    "bindings": {
+      "space": "workspace::Save",
+      ", e": "workspace::ToggleLeftDock",
+      ", r t": "editor::Rename",
+      "m c": "vim::SelectNext",
+      "m p": "vim::SelectPrevious",
+      "m x": ["editor::SelectNext", { "replace_newest": true }],
+      "m a": "editor::SelectAllMatches"
+    }
+  },
+  {
+    "context": "ProjectPanel",
+    "bindings": {
+      "escape": "workspace::ToggleLeftDock",
+      ", r t": "project_panel::Rename",
+      ", e": "workspace::ToggleLeftDock"
+    }
+  }
+]
